@@ -34,7 +34,7 @@ public class QRActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr);
         btnPatient= (Button) findViewById(R.id.btnPatient);
-        btnVisitor= (Button) findViewById(R.id.btnVisitor);
+        //btnVisitor= (Button) findViewById(R.id.btnVisitor);
         qrImage= (ImageView) findViewById(R.id.qr);
         FirebaseDatabase database= FirebaseDatabase.getInstance();
         refrence=database.getReference("userDetails");

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_disease"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="me.gurpreetsk.medihelp.DiseaseActivity">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Alert for Dengue!!"
+    android:textColor="#000"
+    android:layout_margin="10dp"
+    android:textSize="18dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="16dp"
+        android:text="Symptoms:\n1.Sudden High Fever\n2.Severe headaches\n3.Vomiting\n4.Pain in eyes"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="16dp"
+        android:text="Dos:\n1.Give large quantities of fluids with diet.\n2.Advice bed rest\n3.Repeat blood test with monitor platlet count"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="16dp"
+        android:text="Dont's:\n1.Regular Checkup\n2. Do not let water to accumalte in your surrounding."/>
+</LinearLayout>

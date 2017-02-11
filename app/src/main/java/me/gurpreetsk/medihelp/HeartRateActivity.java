@@ -138,7 +138,7 @@ public class HeartRateActivity extends AppCompatActivity implements RtspClient.C
         mClient = new RtspClient();
         mClient.setSession(mSession);
         mClient.setCallback(this);
-
+        
         mSurfaceView.setAspectRatioMode(SurfaceView.ASPECT_RATIO_PREVIEW);
         String ip, port, path;
 

@@ -6,9 +6,9 @@ package me.gurpreetsk.medihelp;
 
 public class AppConfig {
 
-    public static final String STREAM_URL = "rtsp://192.168.43.196:1935/MediHelp/myStream";
-    public static final String PUBLISHER_USERNAME = "";
-    public static final String PUBLISHER_PASSWORD = "";
+    public static final String STREAM_URL = "rtsp://192.168.43.147:1935/testing/myStream";
+    public static final String PUBLISHER_USERNAME = "sahil865gupta";
+    public static final String PUBLISHER_PASSWORD = "KKJadfgh44";
 
     public static final String IMAGE_DIRECTORY_NAME = "Android File Upload";
 

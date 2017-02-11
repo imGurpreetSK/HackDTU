@@ -32,7 +32,7 @@ public class HeatMapActivity extends FragmentActivity implements OnMapReadyCallb
 
     private GoogleMap mMap;
     CameraUpdate cu;
-    private Marker ali,ali2;
+    private Marker ali,ali2,pitamMarker1,pitamMarker2;
     DrawerLayout navDrawer;
     ListView navDrawerList;
     ActionBarDrawerToggle mDrawerToggle;
@@ -53,8 +53,9 @@ public class HeatMapActivity extends FragmentActivity implements OnMapReadyCallb
 
         elements = new String[]{
                 "Calculate Heart Rate",
-                "Find calorific value",
+                "Go to Hospital",
                 "Tumor check",
+                "Fracture Detection",
                 "Log Out"
         };
 
@@ -99,10 +100,13 @@ public class HeatMapActivity extends FragmentActivity implements OnMapReadyCallb
                     startActivity(new Intent(HeatMapActivity.this, HeartRateActivity.class));
                     break;
                 case 1:
-                    startActivity(new Intent(HeatMapActivity.this, UploadActivity.class));
+                    startActivity(new Intent(HeatMapActivity.this, QRActivity.class));
                     break;
                 case 2:
                     startActivity(new Intent(HeatMapActivity.this, TumorActivity.class));
+                    break;
+                case 3:
+                    startActivity(new Intent(HeatMapActivity.this,BoneFractureActivity.class));
                     break;
             }
         }
@@ -163,16 +167,11 @@ public class HeatMapActivity extends FragmentActivity implements OnMapReadyCallb
         List<Marker> markersList = new ArrayList<Marker>();
         Marker Delhi = mMap.addMarker(new MarkerOptions().position(sydney));
         Marker Chaandigarh = mMap.addMarker(new MarkerOptions().position(dtu2));
-        Delhi.setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
-        Chaandigarh.setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
         Marker SriLanka = mMap.addMarker(new MarkerOptions().position(dtu3));
-        Marker pitamMarker1 = mMap.addMarker(new MarkerOptions().position(pitampura));
-        Marker pitamMarker2 = mMap.addMarker(new MarkerOptions().position(pitampura1));
+        pitamMarker1 = mMap.addMarker(new MarkerOptions().position(pitampura));
+        pitamMarker2 = mMap.addMarker(new MarkerOptions().position(pitampura1));
         ali = mMap.addMarker(new MarkerOptions().position(alipur));
         ali2= mMap.addMarker(new MarkerOptions().position(alipur2));
-
-        pitamMarker1.setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
-        pitamMarker2.setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
         markersList.add(Delhi);
         markersList.add(SriLanka);
@@ -210,9 +209,10 @@ public class HeatMapActivity extends FragmentActivity implements OnMapReadyCallb
             @Override
             public boolean onMarkerClick(Marker marker) {
 
-                if(marker.equals(ali) || marker.equals(ali2)){
+                if(marker.equals(ali) || marker.equals(ali2) || marker.equals(pitamMarker1) || marker.equals(pitamMarker2)){
                     Log.d("Heat","clicked");
-
+                    Intent intent=new Intent(HeatMapActivity.this,DiseaseActivity.class);
+                    startActivity(intent);
                 }
                 //Using position get Value from arraylist
                 return false;

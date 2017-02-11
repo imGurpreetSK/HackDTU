@@ -18,7 +18,7 @@
             android:name=".HeartRateActivity"
             android:parentActivityName=".HeatMapActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,18 +40,21 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".TumorActivity"
-            android:parentActivityName=".HeatMapActivity"/>
-        <activity android:name=".QRActivity"></activity>
+        <activity
+            android:name=".TumorActivity"
+            android:parentActivityName=".HeatMapActivity" />
+        <activity android:name=".QRActivity" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
         <activity
             android:name=".HeatMapActivity"
-            android:label="@string/title_activity_heat_map">
-        </activity>
-        <activity android:name=".MarkerCureActivity"></activity>
+            android:label="@string/title_activity_heat_map" />
+        <activity android:name=".MarkerCureActivity" />
+        <activity android:name=".DiseaseActivity" />
+        <activity android:name=".BoneFractureActivity"></activity>
     </application>
 
 </manifest>
