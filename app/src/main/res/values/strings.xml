@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MediHelp</string>
+    <string name="btnTakePicture">Capture Image</string>
+    <string name="btnRecordVideo">Record Video</string>
+    <string name="or">(or)</string>
+    <string name="btnUploadToServer">Upload to Server</string>
+    <string name="drawer_open">Drawer open</string>
+    <string name="drawer_close">Drawer close</string>
+    <string name="title_activity_heat_map">Map</string>
+</resources>
+
